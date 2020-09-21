@@ -86,7 +86,6 @@ define([
      
 
         createWidget(mapView, config, menu) {
-console.log('tttttttt',config)
             config.widgetLoadFn(Widget => {
                 //create an instance of widgetcontainer for each widget and append the widget in it
                 let widgetContainerCons = new widgetContainer();
