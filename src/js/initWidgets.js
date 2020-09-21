@@ -18,8 +18,7 @@ define([
             this.createAsideWidget(map);
 
             widgetConfig.menus.forEach((menu) => {
-                console.log('kouka7a');
-                console.log(menu);
+            
                 if (menu.type == 'simple') {
                     //case of widget with a simple menu
                     this.simpleMenuWidget(menu, widgetContainer, map);
@@ -84,47 +83,7 @@ define([
             });
 
         },
-        // createWidget: function (map, config, menu) {
-        //     console.log("l7a9t hna");
-        //     console.log(config.path);
-        //     require([config.path], (Widget) => {
-
-                
-        //         //create an instance of widgetcontainer for each widget and append the widget in it
-        //         let widgetContainerCons = new widgetContainer();
-                
-        //         $(widgetContainerCons.domNode).find('.widgetTitle .widgetIcon')[0].innerHTML = config.icon;
-        //         $(widgetContainerCons.domNode).find('.widgetTitle .widgetText')[0].innerHTML = config.title;
-
-        //         let widgetCons = new Widget();
-        //         let widgetNode = $(widgetCons.domNode);
-
-        //         $(widgetContainerCons.domNode).find('.widgetBody').append(widgetNode);
-
-        //         $('#main').append($(widgetContainerCons.domNode));
-
-        //         // attach a click event on the menu to display the widget
-        //         this.setMenuClick(menu, widgetContainerCons);
-
-        //         widgetCons.map = map; //this is added so the map can be accessed in the widget
-        //         widgetCons.startup();
-        //         widgetContainerCons.startup();
-
-        //     });
-        // },
-        // setMenuClick: (menu, widgetContainerCons) => {
-        //     menu.click(function (e) {
-        //         e.preventDefault();
-        //         $(widgetContainerCons.domNode).show();
-        //         if (widgetContainerCons.minimizedWidget) {
-        //             widgetContainerCons.restoreWidget();
-        //         }
-        //         //bring the widget to front clicked on its menu
-        //         $('.widgetContainer').css('z-index', 40);
-        //         $(widgetContainerCons.domNode).css('z-index', 50);
-        //     });
-        // }
-
+     
 
         createWidget(mapView, config, menu) {
 console.log('tttttttt',config)

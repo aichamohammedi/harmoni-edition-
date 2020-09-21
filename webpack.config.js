@@ -77,12 +77,29 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(wsv|ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "build/[name].[ext]"
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.html$/i,
                 loader: "html-loader",
             },
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            Popper: ['popper.js', 'default']
+          }),
         new HtmlWebpackPlugin({
             title: "TU WEBPACK",
             filename: "index.html",
